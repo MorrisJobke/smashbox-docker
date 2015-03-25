@@ -22,3 +22,6 @@ RUN git checkout master
 RUN pip install -r requirements.txt
 
 ADD smashbox-docker.conf /smashbox/etc/smashbox.conf
+
+ADD sleep.patch /smashbox/sleep.patch
+RUN cd /smashbox && patch -p1 < sleep.patch

@@ -1,0 +1,13 @@
+diff --git a/bin/smash b/bin/smash
+index c1cd305..db511f2 100755
+--- a/bin/smash
++++ b/bin/smash
+@@ -225,6 +225,8 @@ def main():
+       sys.exit(global_exitcode_error)
+ 
+ if __name__ == '__main__':
++   import time
++   time.sleep(5)
+    main()
+ 
+ 
