@@ -1,8 +1,16 @@
 # Smashbox test environment
 
+https://github.com/MorrisJobke/smashbox-docker
+
 To run a test just run the following:
 
-	docker run -e OC_ACCOUNT_PASSWORD=superSecret123 -e OC_SERVER=123.45.67.89 -e OC_ROOT=owncloud -e OC_ADMIN_USER=admin -e OC_ADMIN_PASSWORD=password owncloud/smashbox:0.0.1 bin/smash lib/test_basicSync.py
+	docker run -e OC_ACCOUNT_PASSWORD=superSecret123 \
+		-e OC_SERVER=123.45.67.89 \
+		-e OC_ROOT=owncloud \
+		-e OC_ADMIN_USER=admin \
+		-e OC_ADMIN_PASSWORD=password \
+		owncloud/smashbox:0.0.1 \
+		bin/smash lib/test_basicSync.py
 
 This runs:
 
