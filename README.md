@@ -1,6 +1,6 @@
 # Smashbox test environment
 
-https://github.com/MorrisJobke/smashbox-docker
+https://registry.hub.docker.com/u/morrisjobke/smashbox/
 
 To run a test just run the following:
 
