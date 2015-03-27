@@ -9,7 +9,7 @@ RUN echo 'deb http://download.opensuse.org/repositories/isv:/ownCloud:/desktop/x
 
 RUN apt-get update && apt-get upgrade -y
 
-RUN apt-get install -y owncloud-client git python-pip
+RUN apt-get install -y owncloud-client git python-pip curl
 
 RUN mkdir /smashbox
 RUN mkdir /root/smashdir
@@ -23,5 +23,5 @@ RUN pip install -r requirements.txt
 
 ADD smashbox-docker.conf /smashbox/etc/smashbox.conf
 
-ADD sleep.patch /smashbox/sleep.patch
-RUN cd /smashbox && patch -p1 < sleep.patch
+ADD run.sh /
+ENTRYPOINT ["/run.sh"]
